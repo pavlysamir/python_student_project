@@ -48,7 +48,7 @@ def inputCaurse(caurse):
 
 def addCaurse():
     global caurses
-    caurse =InputCaurse({})
+    caurse =inputCaurse({})
     code = caurse["code"]
     caurses[code] = caurse
     writeJSON(caurses,"caurses.json")
@@ -57,7 +57,7 @@ def addCaurse():
 def editCaurse():
     global caurses
     code = getCode(caurses, "cources")
-    caurse = InputCaurse(caurses[code])
+    caurse = inputCaurse(caurses[code])
     code = caurse["code"]
     caurses[code] = caurse
     writeJSON(caurses,"caurses.json")

@@ -61,7 +61,7 @@ def getCode(items,subject):
 
 def writeCsv(filePath, data):
     with open(filePath, mode='a', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=data[0].keys())
+        writer = csv.DictWriter(file, fieldnames= data[0].keys())
 
         #fieldnames=dat[0].keys يعنى اسماء الخانات تساوى اول عنصر فى الداتا 
 

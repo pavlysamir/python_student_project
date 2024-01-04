@@ -2,6 +2,7 @@ from utility import *
 from students import *
 from courses import * 
 from grades import *
+import matplotlib.pyplot as plt
 import os
 
 while True:
@@ -55,12 +56,14 @@ while True:
         grade_choice = processMenu({
         "1" : "View student grades ",
         "2" : "Add student grades ",
-        "3" : "print student grades in HTML"
+        "3" : "print student grades in HTML",
+        "4" : "generate bar chart for result student per cource"
         })
 
         if grade_choice =="1": getStudentGrades()
         elif grade_choice =="2": addNewStudent()
         elif grade_choice =="3":printStudentResultToHtml()
+        elif grade_choice =="4":generateBarChartForStudent()
     elif choice =="0": break
     input("press any key to continue...")
 

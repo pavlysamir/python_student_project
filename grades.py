@@ -1,4 +1,5 @@
 from utility import *
+import matplotlib.pyplot as plt
 
 all_grades = {}
 
@@ -119,11 +120,29 @@ def printStudentResultToHtml():
             "<tr><th>English grade</th><th>Math grade</th><th>autuCAD grade</th><th>humanRight grade</th><th>programming grade</th></tr>\n")
         for result in all_grades:
             if result["student_code"] == student_code:
+                english_grade = calc_GPA(int(result['english']))
                 file.write(
                     f"<tr><td>{result['english']}</td><td>{result['math']}</td><td>{result['autuCAD']}</td><td>{result['humanRight']}</td><td>{result['programming']}</td></tr>\n")
+        file.write( "<tr><th>100</th><th>100</th><th>100</th><th>100</th><th>100</th></tr>\n")
 
         file.write("</table>\n")
         file.write("</body>\n")
         file.write("</html>\n")
 
     print(f"Student result for {student_code} saved to {filename}.")    
+
+
+
+
+def generateBarChartForStudent():
+    global all_grades
+    student_codes=[]
+    english_grades=[]
+    for result in all_grades:
+        student_codes.append(result["student_code"])
+        english_grades.append(result["english"])
+
+    english_grades=sorted(english_grades,reverse=True)
+    plt.bar(student_codes,english_grades)
+    plt.show()
+    

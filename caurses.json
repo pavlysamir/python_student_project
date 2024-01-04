@@ -1,1 +1,6 @@
-{"201": {"code": "201", "Name": "English", "Maxdegree": "100"}, "202": {"code": "202", "Name": "Math", "Maxdegree": "100"}, "203": {"code": "203", "Name": "AutoCAD", "Maxdegree": "100"}, "204": {"code": "204", "Name": "Humen Rights", "Maxdegree": "100"}, "205": {"code": "205", "Name": "Programming", "Maxdegree": "100"}}
+{
+    "201": {"code": "201", "Name": "English", "Maxdegree": "100"},
+     "202": {"code": "202", "Name": "Math", "Maxdegree": "100"},
+      "203": {"code": "203", "Name": "AutoCAD", "Maxdegree": "100"},
+       "204": {"code": "204", "Name": "Humen Rights", "Maxdegree": "100"}, 
+       "205": {"code": "205", "Name": "Programming", "Maxdegree": "100"}}

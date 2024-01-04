@@ -1,6 +1,7 @@
 from utility import *
 from students import *
 from courses import * 
+from grades import *
 import os
 
 while True:
@@ -48,7 +49,18 @@ while True:
         elif caurse_choice =="4": removeCaurse()
         elif caurse_choice =="0":back()       
 
-    elif choice =="3":print("grades")
+    elif choice =="3":
+        os.system("cls")
+        listGrades()
+        grade_choice = processMenu({
+        "1" : "View student grades ",
+        "2" : "Add student grades ",
+        "3" : "print student grades in HTML"
+        })
+
+        if grade_choice =="1": getStudentGrades()
+        elif grade_choice =="2": addNewStudent()
+        elif grade_choice =="3":printStudentResultToHtml()
     elif choice =="0": break
     input("press any key to continue...")
 

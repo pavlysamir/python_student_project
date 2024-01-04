@@ -44,9 +44,9 @@ def readJSON(filePath):
 
 
 
-def getCode(items):
+def getCode(items,subject):
     while True:
-        code = input("Enter code of student:")
+        code = input("Enter code {}:".format(subject))
         if code in items.keys(): break
         print("Code is not found, please try again.....")
     print("----------------------")

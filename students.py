@@ -19,11 +19,14 @@ def listStudents():
 
 def viewStudent():
     global students
-    code = getCode(students)
+    code = getCode(students,"student")
     student = students[code]
  
+    print("Name: {}".format(student["name"]))
     print("birthday: {}".format(student["birthday"]))
     return
+
+
 
 def inputStudent(student):
     global students

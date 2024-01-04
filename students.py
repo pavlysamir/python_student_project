@@ -58,7 +58,7 @@ def addStudent():
 
 def editStudent():
     global students
-    code = getCode(students)
+    code = getCode(students,"student")
     student = inputStudent(students[code])
     code = student["code"]
     students[code] = student
@@ -68,7 +68,7 @@ def editStudent():
 
 def removeStudent():
     global students
-    code = getCode(students)
+    code = getCode(students,"student")
     del students[code]
     writeJSON(students,"students.json")
 

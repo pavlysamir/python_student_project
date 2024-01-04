@@ -4,7 +4,7 @@ import json
 caurses = {}
 
 
-def ListCaurses():
+def listCaurses():
     global caurses
     caurses = readJSON("caurses.json")
     print("**  Name of caurses and there codes  **")
@@ -17,7 +17,7 @@ def ListCaurses():
 
 
 
-def ViewCaurse():
+def viewCaurse():
     global caurses
     code = getCode(caurses,"cources")
     caurse = caurses[code]
@@ -26,7 +26,7 @@ def ViewCaurse():
     print("Maxdegree: {}".format(caurse["Maxdegree"]))
     return
 
-def InputCaurse(caurse):
+def inputCaurse(caurse):
     global caurses
     if "code" not in caurse.keys():
         while True:
@@ -46,7 +46,7 @@ def InputCaurse(caurse):
     return caurse
 
 
-def AddCaurse():
+def addCaurse():
     global caurses
     caurse =InputCaurse({})
     code = caurse["code"]
@@ -54,9 +54,9 @@ def AddCaurse():
     writeJSON(caurses,"caurses.json")
 
 
-def EditCaurse():
+def editCaurse():
     global caurses
-    code = getCode2(caurses)
+    code = getCode(caurses, "cources")
     caurse = InputCaurse(caurses[code])
     code = caurse["code"]
     caurses[code] = caurse
@@ -64,11 +64,11 @@ def EditCaurse():
 
 
 
-def RemoveCaurse():
+def removeCaurse():
     global caurses
-    code = getCode2(caurses)
+    code = getCode(caurses,"cources")
     del caurses[code]
     writeJSON(caurses,"caurses.json")
 
-def Back():
+def back():
     return

@@ -57,13 +57,41 @@ while True:
         "1" : "View student grades ",
         "2" : "Add student grades ",
         "3" : "print student grades in HTML",
-        "4" : "generate bar chart for result student per cource"
+        "4" : "generate bar chart for result student per cource",
+        "5": "generate pie chart for result student per cource"
         })
 
         if grade_choice =="1": getStudentGrades()
         elif grade_choice =="2": addNewStudent()
         elif grade_choice =="3":printStudentResultToHtml()
-        elif grade_choice =="4":generateBarChartForStudent()
+        elif grade_choice =="4": 
+            os.system("cls") 
+            barChart_choice= processMenu({
+                "1":"English grades",
+                "2":"Math grades",
+                "3":"AutoCad grades",
+                "4":"Human rights grades",
+                "5":"Programming grades",
+            })
+            if barChart_choice =="1": generateBarChartForStudent(barChart_choice)
+            elif barChart_choice =="2": generateBarChartForStudent(barChart_choice)
+            elif barChart_choice =="3":generateBarChartForStudent(barChart_choice)
+            elif barChart_choice =="4": generateBarChartForStudent(barChart_choice)
+            elif barChart_choice =="5": generateBarChartForStudent(barChart_choice)
+        elif grade_choice =="5": 
+            os.system("cls") 
+            pieChart_choice= processMenu({
+                "1":"English grades",
+                "2":"Math grades",
+                "3":"AutoCad grades",
+                "4":"Human rights grades",
+                "5":"Programming grades",
+            })
+            if pieChart_choice =="1": generatePieChartForStudent(pieChart_choice)
+            elif pieChart_choice =="2": generatePieChartForStudent(pieChart_choice)
+            elif pieChart_choice =="3":generatePieChartForStudent(pieChart_choice)
+            elif pieChart_choice =="4": generatePieChartForStudent(pieChart_choice)
+            elif pieChart_choice =="5": generatePieChartForStudent(pieChart_choice)
     elif choice =="0": break
     input("press any key to continue...")
 
